@@ -2,7 +2,10 @@ angular.module("angularTodo", [])
 
 .controller('mainCtrl', function($scope, dataService) {
 
-  $scope.helloConsole = dataService.helloConsole;
+  $scope.addTodo = function() {
+    var todo = {name: "This is a new todo."};
+    $scope.todos.push(todo);
+  };
 
   dataService.getTodos(function(response) {
     console.log(response.data);
@@ -16,7 +19,6 @@ angular.module("angularTodo", [])
 
   $scope.saveTodo = function(todo) {
     dataService.saveTodos(todo);
-    
   };
 
 })
