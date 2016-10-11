@@ -10,7 +10,7 @@ angular.module("angularTodo")
   }
 
   this.saveTodos = function(todo) {
-    console.log("This " + todo.name + " has been saved")
+    console.log(todo.length + " has been saved")
   };
 
   this.deleteTodos = function(todo) {
